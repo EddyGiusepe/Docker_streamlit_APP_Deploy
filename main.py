@@ -44,15 +44,16 @@ ano = st.slider("Ano que foi construído o imóvel", min_value=ano_min, max_valu
 st.sidebar.title("Escreva as suas informações")
 name_user = st.sidebar.text_input("Digite seu nome")
 
+# Passo como Dicionário porque depois com PANDAS é fácil converter
 dados = {
-    'tamanho': [area],
+    'tamanho': [area], # Dentro de uma lista
     'ano': [ano],
     'garagem': [garagem]
         }
 
 click = st.button('Fazer a previsão')
 if click:
-    y_pred = float(modelo_rf.predict(pd.DataFrame(dados))[0])
-    y_pred = round(y_pred, 2)
+    y_pred = float(modelo_rf.predict(pd.DataFrame(dados))[0]) # Me retorna np.array, mas eu quero apenas um elemento [0]
+    y_pred = round(y_pred, 2) # 2 --> Caixas decimais
     st.write(f"Olá {name_user} do bairro {bairro}, com as informações passadas o valor da casa é de ${y_pred}")
     
