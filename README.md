@@ -1,6 +1,6 @@
 # Docker_streamlit_APP_Deploy
 
-Neste repositório aprenderemos a fazer o Deploy de um Modelo de Machine Learning, usando a biblioteca `streamlit`. Também rodaremos a nossa aplicação em "Docker".
+Neste repositório aprenderemos a fazer o Deploy de um Modelo de Machine Learning, usando a biblioteca `streamlit`. Também rodaremos a nossa aplicação em `Docker`.
 
 A seguir mostramos a estrutura de nossos Diretórios, arquivos, etc
 
